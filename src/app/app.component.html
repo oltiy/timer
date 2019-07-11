@@ -15,19 +15,18 @@
       
   <button style=color:green (click)='startTimer()' *ngIf ="timeWork"  >יאללה לחרוש
   </button>
-    <button style=color:red (click)='startTimer()' *ngIf ="!timeWork" [disabled]="click">יאללה לחרוש</button>
+    <button style=color:red (click)='startTimer()' *ngIf ="!timeWork" disabled>יאללה לחרוש</button>
   
   </div>
   
   <div align="center">
       
-    <button style=color:green (click)= 'pauseTimer()' *ngIf ="timePo">הפסקה</button>
-    <button style=color:red (click)='pauseTimer()' *ngIf ="!timePo" [disabled]="click">הפסקה</button>
-    
+    <button style=color:green (click)='pauseTimer()' *ngIf ="timePo">הפסקה</button>
+    <button style=color:red (click)='pauseTimer()' *ngIf ="!timePo" disabled>הפסקה</button>
+   
   </div>
   
-  <div align="center">
-      
+    <div align="center">
   <button style=color:green (click)='displayTime()'>כמה זמן נותר</button>
   
   </div>

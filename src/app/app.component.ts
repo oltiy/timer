@@ -45,6 +45,8 @@ export class AppComponent {
   forShowFormat;
   timeChoiseFormat;
   displayName2;
+  counter =0;
+  notFirst= false;
 
   
 
@@ -59,7 +61,7 @@ export class AppComponent {
   displayTime(){
     
     this.displayName = !this.displayName;
-    if(this.displayName){alert("?את בטוחה עדן")}
+    if(this.displayName){alert("את בטוחה עדן?")}
   }
   displayTime2(){
     
@@ -73,11 +75,11 @@ export class AppComponent {
     this.firstTime = Math.floor(this.dateTotal.getTime()/1000);
     this.checking = false;
     this.checkBtn =false; 
-    this.playAudio();
     }
+    ++this.counter;
     //this.playAudio();
     this.date = new Date();
-   
+   this.notFirst=false;
     this.timeWork =false;
     this.click =true;
     this.timePo= true;
@@ -117,13 +119,18 @@ export class AppComponent {
 
 
   pauseTimer() {
+    if(this.counter===0){
+      return;
+    }
+    else{
     this.date3P=this.date3 +this.date3P;
     this.timeWork =true;
     clearInterval(this.interval);
     this.click =false;
     this.pausedT= true;
     this.timePo =false;
-    
+    --this.counter;
+    }
   }
   playAudio(){
     let audio = new Audio();
