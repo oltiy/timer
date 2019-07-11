@@ -1,0 +1,46 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div align="center">
+  <h2>
+    <br>
+   Study Zone
+   <br>
+   <br>
+  </h2>
+  </div>
+  <br/>
+  <br/>
+  
+  <div align="center">
+    
+      
+  <button style=color:green (click)='startTimer()' *ngIf ="timeWork"  >יאללה לחרוש
+  </button>
+    <button style=color:red (click)='startTimer()' *ngIf ="!timeWork" [disabled]="click">יאללה לחרוש</button>
+  
+  </div>
+  
+  <div align="center">
+      
+    <button style=color:green (click)= 'pauseTimer()' *ngIf ="timePo">הפסקה</button>
+    <button style=color:red (click)='pauseTimer()' *ngIf ="!timePo" [disabled]="click">הפסקה</button>
+    
+  </div>
+  
+  <div align="center">
+      
+  <button style=color:green (click)='displayTime()'>כמה זמן נותר</button>
+  
+  </div>
+  
+  <div style=color:blue *ngIf ="displayName">
+  
+  <p align="center">הזמן שהוגרל הוא {{timeChoiseFormat}} דקות
+      
+  <br>להחזיק מעמד עוד {{timeLeftFormat}}  דקות לחרישה</p> 
+  </div>
+  
+  
+ 
+    
+    
+<router-outlet></router-outlet>
