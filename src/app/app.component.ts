@@ -134,7 +134,7 @@ export class AppComponent {
   }
   playAudio(){
     let audio = new Audio();
-    audio.src = "timer/assets/analog-watch-alarm_daniel-simion.wav";
+    audio.src = "./assets/analog-watch-alarm_daniel-simion.wav";
     audio.load();
     audio.play();
   }
