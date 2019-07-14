@@ -61,7 +61,7 @@ export class AppComponent {
   displayTime(){
     
     this.displayName = !this.displayName;
-    if(this.displayName){alert("את בטוחה עדן?")}
+    if(this.displayName){alert("את בטוחה ?")}
   }
   displayTime2(){
     
